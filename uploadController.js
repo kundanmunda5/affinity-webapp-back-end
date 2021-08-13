@@ -67,6 +67,8 @@ const downloadFiles = (req, res) => {
     // res.send(fs.send)
     res.download(path+fileName)
 };
+
+
 // Delete file operations  
 const deleteFiles = (req, res) => {
     const fileName = req.params.name;
