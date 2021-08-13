@@ -4,11 +4,7 @@ const app = express();
 
 global.__basedir = __dirname;
 
-// var corsConfig = {
-//   origin: "http://localhost:8888"
-// };
 
-// app.use(cors(corsConfig));
 app.use(cors());
 
 
@@ -21,10 +17,7 @@ app.use(express.urlencoded({
 
 evokeRoutes(app);
 
-const port = process.env.PORT || 8888;
-app.listen(port, () => {
-  console.log('Connected to port ' + port)
-})
+
 
 // Handle error
 app.use((req, res, next) => {
@@ -38,3 +31,8 @@ app.use(function (err, req, res, next) {
   if (!err.statusCode) err.statusCode = 500;
   res.status(err.statusCode).send(err.message);
 });
+
+const port = process.env.PORT || 8888;
+app.listen(port, () => {
+  console.log('Connected to port ' + port)
+})
