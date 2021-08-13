@@ -9,6 +9,12 @@ let routes = (app) => {
   router.get("/files", controller.getFilesList)
 
   router.get("/files/:name", controller.downloadFiles)
+  
+  router.get('*',(req, res) => {
+    res.send("Created by : Kundan Munda N S")})
+  router.post('*',(req, res) => {
+    res.send("Created by : Kundan Munda N S :: \t Wrong post address")})
+  
 
   app.use(router);
 };

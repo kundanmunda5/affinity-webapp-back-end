@@ -2,8 +2,8 @@ const upload = require("./middleware/fileUpload");
 const fs = require("fs");
 
 
-// const URL = "http://localhost:8888/get-cfiles/";
-const URL = "https://affinity-web-app-backend.herokuapp.com/get-cfiles/";
+const URL = "http://localhost:8888/get-cfiles/";
+// const URL = "https://affinity-web-app-backend.herokuapp.com/get-cfiles/";
 
 //upload files operation
 
@@ -20,7 +20,7 @@ const uploadFile = async (req, res) => {
       message: "File uploaded successfully: " + req.file.originalname,
     });
   } catch (err) {
-    console.log(err);
+    console.log("Error while uploading file: ");
 
     if (err.code == "LIMIT_FILE_SIZE") {
       return res.status(500).send({
@@ -64,7 +64,7 @@ const getFilesList = (req, res) => {
 const downloadFiles = (req, res) => {
     const fileName = req.params.name;
     const path = __basedir + "/public/uploads/";
-    
+    res.send(fs.send)
     res.download(path+fileName)
 };
   

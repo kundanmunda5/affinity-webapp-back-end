@@ -5,19 +5,16 @@ const app = express();
 global.__basedir = __dirname;
 
 
-app.use(cors());
-
-
-
 const evokeRoutes = require("./routes/uploadRoute");
+
+
+app.use(cors());
 
 app.use(express.urlencoded({ 
   extended: true 
 }));
 
 evokeRoutes(app);
-
-
 
 // Handle error
 app.use((req, res, next) => {
