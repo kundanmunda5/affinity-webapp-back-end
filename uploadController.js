@@ -1,7 +1,8 @@
 const upload = require("./middleware/fileUpload");
 const fs = require("fs");
 
-const URL = "http://localhost:8888/get-cfiles/";
+// const URL = "http://localhost:8888/get-cfiles/";
+const URL = "https://affinity-web-app-backend.herokuapp.com/";
 
 //upload files operation
 
