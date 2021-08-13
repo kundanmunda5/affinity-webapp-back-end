@@ -1,5 +1,4 @@
 # affinity-webapp-back-end
 front-end using react
 
-## Dependencies used
->
+deployment to heroku : in progress
