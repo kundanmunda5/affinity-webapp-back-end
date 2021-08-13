@@ -1,0 +1,29 @@
+{
+  "name": "affinity-webapp-back-end",
+  "version": "1.0.0",
+  "description": "back-end-server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kundanmunda98/affinity-webapp-back-end.git"
+  },
+  "keywords": [
+    "affinity",
+    "assignment"
+  ],
+  "author": "kundan munda n s",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kundanmunda98/affinity-webapp-back-end/issues"
+  },
+  "homepage": "https://github.com/kundanmunda98/affinity-webapp-back-end#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
+    "express": "^4.17.1",
+    "multer": "^1.4.3"
+  }
+}
