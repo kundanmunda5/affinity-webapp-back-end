@@ -36,12 +36,13 @@ const uploadFile = async (req, res) => {
 
 //get file list operation
 const getFilesList = (req, res) => {
-  const path = __basedir + "/public/uploads/";
+  const path = __basedir + "/public/uploads/"
 
   fs.readdir(path, function (err, files) {
     if (err) {
       res.status(500).send({
         message: "Files not found.",
+        err: err
       });
     }
 
@@ -65,7 +66,7 @@ const downloadFiles = (req, res) => {
     const fileName = req.params.name;
     const path = __basedir + "/public/uploads/";
     // res.send(fs.send)
-    res.download(path+fileName)
+    res.status(200).download(path+fileName)
 };
 
 
