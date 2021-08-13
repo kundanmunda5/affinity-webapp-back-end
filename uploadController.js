@@ -64,7 +64,7 @@ const getFilesList = (req, res) => {
 const downloadFiles = (req, res) => {
     const fileName = req.params.name;
     const path = __basedir + "/public/uploads/";
-    res.send(fs.send)
+    // res.send(fs.send)
     res.download(path+fileName)
 };
   
