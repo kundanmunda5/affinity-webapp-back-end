@@ -10,10 +10,17 @@ let routes = (app) => {
 
   router.get("/files/:name", controller.downloadFiles)
   
+  router.delete("/files/:name", controller.deleteFiles)
+  
+  
   router.get('*',(req, res) => {
     res.send("Created by : Kundan Munda N S")})
   router.post('*',(req, res) => {
     res.send("Created by : Kundan Munda N S :: \t Wrong post address")})
+    
+  router.delete('*',(req, res) => {
+    res.send("Created by : Kundan Munda N S :: \t Wrong delete address")})
+
   
 
   app.use(router);

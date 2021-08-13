@@ -67,6 +67,18 @@ const downloadFiles = (req, res) => {
     // res.send(fs.send)
     res.download(path+fileName)
 };
+// Delete file operations  
+const deleteFiles = (req, res) => {
+    const fileName = req.params.name;
+    const path = __basedir + "/public/uploads/";
+    // res.send(fs.send)
+    fs.unlink(path+fileName,(err)=>{
+      if(err) res.send("Error :: ",err);
+
+      res.send(`File : ${fileName} deleted successfully from the server`);
+    })
+    
+};
   
 
-module.exports = { uploadFile, downloadFiles, getFilesList };
+module.exports = { uploadFile, downloadFiles, getFilesList, deleteFiles};
